@@ -2,12 +2,18 @@
 <html lang="en" data-layout="horizontal" data-topbar="dark" data-sidebar-size="lg" data-sidebar-image="none">
   <head>
     <meta charset="utf-8" />
-    <title>Login | Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Login Dashboard Admin" name="description" />
     <meta content="Themesbrand" name="author" />
-    <!-- App favicon -->
-    <link rel="shortcut icon" href="assets_admin/images/favicon.ico">
+
+    <?php foreach($web_option as $wo): ?>
+      <?php if($wo['name_web_option'] == "icon_desa"){ ?>
+        <link rel="shortcut icon" type="image/x-icon" href="<?php base_url() ?>/assets/imgs/template/<?= $wo['value_web_option'] ?>">
+      <?php } ?>
+      <?php if($wo['name_web_option'] == "nama_web_desa"){ ?>
+        <title>Login Admin | Web  <?= ucwords($wo['value_web_option']) ?></title>
+      <?php } ?>
+    <?php endforeach; ?>
     <!-- Layout config Js -->
     <script src="assets_admin/js/layout.js"></script>
     <!-- Bootstrap Css -->
@@ -60,9 +66,13 @@
             <div class="col-lg-12">
               <div class="text-center mt-sm-5 mb-4 text-white-50">
                 <div>
-                  <a href="#" class="d-inline-block auth-logo">
-                    <img src="assets_admin/images/logo-light.png" alt="" height="20">
-                  </a>
+                  <?php foreach($web_option as $wo): ?>
+                    <?php if($wo['name_web_option'] == "nav_icon_desa1"){ ?>
+                      <a href="<?php base_url() ?>/" class="d-inline-block auth-logo">
+                        <img src="<?php base_url() ?>/assets/imgs/template/<?= $wo['value_web_option'] ?>" alt="Webdesa" height="45">
+                      </a>
+                    <?php } ?>
+                  <?php endforeach; ?>
                 </div>
                 <p class="mt-3 fs-15 fw-medium">Login Dashboard Admin</p>
               </div>

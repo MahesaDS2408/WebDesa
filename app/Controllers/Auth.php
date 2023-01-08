@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\UserModel;
+use App\Models\WebOptionModel;
 
 class Auth extends BaseController
 {
@@ -40,7 +41,9 @@ class Auth extends BaseController
 	public function admin_login()
 	{
         if (!$this->session->has('isLogin')) {
-            return view('Auth/login_admin');
+            $model = new WebOptionModel();
+		    $data['web_option'] = $model->get_option_web();
+            return view('Auth/login_admin', $data);
         }
         return redirect()->to('/user');
 	}

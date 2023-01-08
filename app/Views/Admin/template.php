@@ -4,13 +4,18 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Dashboard | Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Dashboard Admin" name="description" />
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
-    <!-- App favicon -->
-    <link rel="shortcut icon" href="<?php base_url() ?>/assets_admin/images/favicon.ico">
+    <?php foreach($web_option as $wo): ?>
+      <?php if($wo['name_web_option'] == "icon_desa"){ ?>
+        <link rel="shortcut icon" type="image/x-icon" href="<?php base_url() ?>/assets/imgs/template/<?= $wo['value_web_option'] ?>">
+      <?php } ?>
+      <?php if($wo['name_web_option'] == "nama_web_desa"){ ?>
+        <title>Login Admin | Web  <?= ucwords($wo['value_web_option']) ?></title>
+      <?php } ?>
+    <?php endforeach; ?>
 
     <!--datatable css-->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
@@ -52,7 +57,11 @@
                         <div class="navbar-brand-box horizontal-logo">
                             <a href="#!" class="logo logo-light">
                                 <span class="logo-lg">
-                                    <img src="<?php base_url() ?>/assets_admin/images/logo-light.png" alt="" height="17">
+                                <?php foreach($web_option as $wo): ?>
+                                    <?php if($wo['name_web_option'] == "nav_icon_desa1"){ ?>
+                                    <img src="<?php base_url() ?>/assets/imgs/template/<?= $wo['value_web_option'] ?>" alt="" height="35">
+                                    <?php } ?>
+                                <?php endforeach; ?>
                                 </span>
                             </a>
                         </div>
@@ -145,7 +154,11 @@
                 <!-- Light Logo-->
                 <a href="index.html" class="logo logo-light">
                     <span class="logo-lg">
-                        <img src="<?php base_url() ?>/assets_admin/images/logo-light.png" alt="" height="17">
+                        <?php foreach($web_option as $wo): ?>
+                            <?php if($wo['name_web_option'] == "nav_icon_desa1"){ ?>
+                            <img src="<?php base_url() ?>/assets/imgs/template/<?= $wo['value_web_option'] ?>" alt="" height="30">
+                            <?php } ?>
+                        <?php endforeach; ?>
                     </span>
                 </a>
                 <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">

@@ -35,7 +35,7 @@
             <div class="header-logo">
             <?php foreach($web_option as $wo): ?>
               <?php if($wo['name_web_option'] == "nav_icon_desa"){ ?>
-                <a class="d-flex" href="<?php base_url() ?>/"><img alt="Webdesa" src="<?php base_url() ?>/assets/imgs/template/<?= $wo['value_web_option'] ?>"></a>
+                <a class="d-flex" href="<?php base_url() ?>/"><img alt="Webdesa" src="<?php base_url() ?>/assets/imgs/template/<?= $wo['value_web_option'] ?>" height="35"></a>
               <?php } ?>
             <?php endforeach; ?>
             </div>
