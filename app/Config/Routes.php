@@ -10,6 +10,8 @@ $routes = Services::routes();
 if (file_exists(SYSTEMPATH . 'Config/Routes.php'))
 {
 	require SYSTEMPATH . 'Config/Routes.php';
+	setlocale(LC_TIME, 'IND');
+	//setlocale(LC_TIME, 'id_ID.utf8'); //server
 }
 
 /**
@@ -33,12 +35,31 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
-// User
+/* =================================== User ============================== */
 $routes->get('/', 'Halaman::beranda');
 $routes->get('berita', 'Halaman::artikel');
 $routes->get('berita/(:num)/(:any)', 'Halaman::artikel_detail');
 
-// End User
+/* =================================== End User ============================== */
+
+
+
+/* =================================== Auth ============================== */
+$routes->get('login_admin', 'Auth::admin_login');
+$routes->post('login_admin', 'Auth::validasi_admin_login');
+$routes->get('logout', 'Auth::slogout');
+
+
+/* =================================== End Auth ============================== */
+
+
+/* =================================== Admin ============================== */
+
+$routes->get('dashboard', 'Admin::dashboard');
+$routes->get('post', 'Media::post');
+
+/* =================================== End Admin ============================== */
+
 
 /*
  * --------------------------------------------------------------------

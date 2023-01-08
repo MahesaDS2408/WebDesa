@@ -18,4 +18,6 @@
 (id_user, username, email, password, last_login, active, phone_user, level_user)
 ## DETAIL USER
 (id_detail_user, email, nama_user, foto_user)
+## ARTIKEL
+## ARTIKEL DETAIL
 
