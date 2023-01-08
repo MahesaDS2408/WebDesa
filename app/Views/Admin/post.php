@@ -29,7 +29,7 @@
               <div class="row g-2">
                 <div class="col">
                   <div class="position-relative mb-3">
-                    <input type="text" class="form-control form-control-lg bg-light border-light" placeholder="Cari Disini..">
+                    <input type="text" id="value" onkeyup="filter()" class="form-control form-control-lg bg-light border-light" placeholder="Cari Judul Berita Disini..">
                   </div>
                 </div>
                 <div class="col-auto">
@@ -63,7 +63,7 @@
             <!-- tab-pane-->
             <div class="tab-pane active" id="news" role="tabpanel">
               <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 berita">
                   <div class="card border">
                     <div class="card-body">
                       <div class="d-sm-flex">
@@ -77,7 +77,7 @@
                             </li>
                           </ul>
                           <h5 class="fs-15">
-                            <a href="javascript:void(0);">A mix of friends and strangers heading off to find an adventure</a>
+                            <a href="javascript:void(0);" class="judul">A mix of friends and strangers heading off to find an adventure</a>
                           </h5>
                           <ul class="list-inline mb-0">
                             <li class="list-inline-item">
@@ -94,7 +94,7 @@
                   <!--end card-->
                 </div>
                 <!--end col-->
-                <div class="col-lg-6">
+                <div class="col-lg-6 berita">
                   <div class="card border">
                     <div class="card-body">
                       <div class="d-sm-flex">
@@ -108,7 +108,7 @@
                             </li>
                           </ul>
                           <h5 class="fs-15">
-                            <a href="javascript:void(0);">How to get creative in your work ?</a>
+                            <a href="javascript:void(0);" class="judul">How to get creative in your work ?</a>
                           </h5>
                           <ul class="list-inline mb-0">
                             <li class="list-inline-item">
@@ -125,7 +125,7 @@
                   <!--end card-->
                 </div>
                 <!--end col-->
-                <div class="col-lg-6">
+                <div class="col-lg-6 berita">
                   <div class="card border">
                     <div class="card-body">
                       <div class="d-sm-flex">
@@ -139,7 +139,7 @@
                             </li>
                           </ul>
                           <h5 class="fs-15">
-                            <a href="javascript:void(0);">How to become a best sale marketer in a year!</a>
+                            <a href="javascript:void(0);" class="judul">How to become a best sale marketer in a year!</a>
                           </h5>
                           <ul class="list-inline mb-0">
                             <li class="list-inline-item">
@@ -156,7 +156,7 @@
                   <!--end card-->
                 </div>
                 <!--end col-->
-                <div class="col-lg-6">
+                <div class="col-lg-6 berita">
                   <div class="card border">
                     <div class="card-body">
                       <div class="d-sm-flex">
@@ -170,7 +170,7 @@
                             </li>
                           </ul>
                           <h5 class="fs-15">
-                            <a href="javascript:void(0);">Manage white space in responsive layouts ?</a>
+                            <a href="javascript:void(0);" class="judul">Manage white space in responsive layouts ?</a>
                           </h5>
                           <ul class="list-inline mb-0">
                             <li class="list-inline-item">
@@ -231,5 +231,20 @@
   </div>
   <!--end row-->
 </div>
-
+<!-- script search box berita -->
+<script type="text/javascript">
+  function filter() {
+    var value,judul,rapat,i;
+    value = document.getElementById("value").value.toUpperCase();
+    rapat = document.getElementsByClassName("berita");
+    for(i=0;i<rapat.length;i++){
+      judul = rapat[i].getElementsByClassName("judul");
+      if (judul[0].innerHTML.toUpperCase().indexOf(value) > -1) {
+        rapat[i].style.display = "";
+      }else{
+        rapat[i].style.display = "none";
+      }
+    }
+  }
+</script>
 <?= $this->endSection(); ?>
