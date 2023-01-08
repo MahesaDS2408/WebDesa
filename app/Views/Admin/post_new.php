@@ -34,15 +34,16 @@
                     
                     <div class="col-xxl-12 col-md-6">
                         <label for="Jberita" class="form-label">Judul Berita</label>
-                        <input type="text" class="form-control" id="Jberita" name="Jberita">
+                        <input type="text" class="form-control" id="Jberita" name="Jberita" required>
                     </div>
                     <!--end col-->
                     <div class="col-xxl-3 col-md-6">
                         <label for="kategori" class="form-label">Kategori Berita</label>
                         <select class="form-select" name="kategori" id="kategori" aria-label="Default select example" required>
                             <option disabled selected>Pilih Kategori</option>
-                            <option>Berita</option>
-                            <option>Pengumuman</option>
+                            <?php foreach($kategori as $kat){ ?>
+                            <option value="<?= $kat['id_artikel_kategori'] ?>"><?= ucwords($kat['nama_artikel_kategori']) ?></option>
+                            <?php } ?>
                         </select>
                     </div>
                     <!--end col-->

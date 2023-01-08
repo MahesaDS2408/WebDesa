@@ -63,41 +63,45 @@
             <!-- tab-pane-->
             <div class="tab-pane active" id="news" role="tabpanel">
               <div class="row">
-                <div class="col-lg-6 berita">
-                  <div class="card border">
-                    <div class="card-body">
-                      <div class="d-sm-flex">
-                        <div class="flex-shrink-0">
-                          <img src="assets_admin/images/small/img-1.jpg" alt="" width="115" class="rounded-1" />
+                <?php foreach($artikel as $art){ ?>
+                  <div class="col-lg-6 berita">
+                    <div class="card border">
+                      <div class="card-body">
+                        <div class="d-sm-flex">
+                          <div class="flex-shrink-0">
+                            <img src="<?php base_url() ?>/assets/images_berita/<?= $art['tumbnail_artikel'] ?>" alt="" height="75" width="115" class="rounded-1" />
+                          </div>
+                          <div class="flex-grow-1 ms-sm-4 mt-3 mt-sm-0">
+                            <ul class="list-inline mb-2">
+                              <li class="list-inline-item">
+                                <span class="badge badge-soft-success fs-11"><?= ucwords($art['nama_artikel_kategori']) ?></span>
+                              </li>
+                            </ul>
+                            <h5 class="fs-15">
+                              <a href="javascript:void(0);" class="judul"><?= ucwords($art['judul_artikel']) ?></a>
+                            </h5>
+                            <ul class="list-inline mb-0">
+                              <li class="list-inline-item">
+                                <i class="ri-user-3-fill text-success align-middle me-1"></i> <?= ucwords($art['nama_user']) ?>
+                              </li>
+                              <li class="list-inline-item">
+                                <i class="ri-calendar-2-fill text-success align-middle me-1"></i> <?= strftime('%A, %d %B %Y', strtotime($art['tgl_artikel'])); ?>
+                              </li>
+                            </ul>
+                          </div>
                         </div>
-                        <div class="flex-grow-1 ms-sm-4 mt-3 mt-sm-0">
-                          <ul class="list-inline mb-2">
-                            <li class="list-inline-item">
-                              <span class="badge badge-soft-success fs-11">Business</span>
-                            </li>
-                          </ul>
-                          <h5 class="fs-15">
-                            <a href="javascript:void(0);" class="judul">A mix of friends and strangers heading off to find an adventure</a>
-                          </h5>
-                          <ul class="list-inline mb-0">
-                            <li class="list-inline-item">
-                              <i class="ri-user-3-fill text-success align-middle me-1"></i> James Ballard
-                            </li>
-                            <li class="list-inline-item">
-                              <i class="ri-calendar-2-fill text-success align-middle me-1"></i> 23 Nov, 2021
-                            </li>
-                          </ul>
-                        </div>
+                          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a href="javascript:void(0);" class="btn btn-primary me-md-2" role="button">Tayang</a>
+                            <a href="javascript:void(0);" class="btn btn-warning me-md-2" role="button">Draf</a>
+                          </div>
                       </div>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                          <a href="javascript:void(0);" class="btn btn-primary me-md-2" role="button">Tayang</a>
-                          <a href="javascript:void(0);" class="btn btn-warning me-md-2" role="button">Draf</a>
-                        </div>
                     </div>
+                    <!--end card-->
                   </div>
-                  <!--end card-->
-                </div>
-                <!--end col-->
+                  <!--end col-->
+                <?php } ?>
+
+
                 <div class="col-lg-6 berita">
                   <div class="card border">
                     <div class="card-body">
@@ -133,76 +137,7 @@
                   <!--end card-->
                 </div>
                 <!--end col-->
-                <div class="col-lg-6 berita">
-                  <div class="card border">
-                    <div class="card-body">
-                      <div class="d-sm-flex">
-                        <div class="flex-shrink-0">
-                          <img src="assets_admin/images/small/img-3.jpg" alt="" width="115" class="rounded-1" />
-                        </div>
-                        <div class="flex-grow-1 ms-sm-4 mt-3 mt-sm-0">
-                          <ul class="list-inline mb-2">
-                            <li class="list-inline-item">
-                              <span class="badge badge-soft-info fs-11">Fashion</span>
-                            </li>
-                          </ul>
-                          <h5 class="fs-15">
-                            <a href="javascript:void(0);" class="judul">How to become a best sale marketer in a year!</a>
-                          </h5>
-                          <ul class="list-inline mb-0">
-                            <li class="list-inline-item">
-                              <i class="ri-user-3-fill text-success align-middle me-1"></i> Elwood Arter
-                            </li>
-                            <li class="list-inline-item">
-                              <i class="ri-calendar-2-fill text-success align-middle me-1"></i> 23 Nov, 2021
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                          <a href="javascript:void(0);" class="btn btn-primary me-md-2" role="button">Tayang</a>
-                          <a href="javascript:void(0);" class="btn btn-warning me-md-2" role="button">Draf</a>
-                        </div>
-                    </div>
-                  </div>
-                  <!--end card-->
-                </div>
-                <!--end col-->
-                <div class="col-lg-6 berita">
-                  <div class="card border">
-                    <div class="card-body">
-                      <div class="d-sm-flex">
-                        <div class="flex-shrink-0">
-                          <img src="assets_admin/images/small/img-4.jpg" alt="" width="115" class="rounded-1" />
-                        </div>
-                        <div class="flex-grow-1 ms-sm-4 mt-3 mt-sm-0">
-                          <ul class="list-inline mb-2">
-                            <li class="list-inline-item">
-                              <span class="badge badge-soft-primary fs-11">Product</span>
-                            </li>
-                          </ul>
-                          <h5 class="fs-15">
-                            <a href="javascript:void(0);" class="judul">Manage white space in responsive layouts ?</a>
-                          </h5>
-                          <ul class="list-inline mb-0">
-                            <li class="list-inline-item">
-                              <i class="ri-user-3-fill text-success align-middle me-1"></i> Nancy Martino
-                            </li>
-                            <li class="list-inline-item">
-                              <i class="ri-calendar-2-fill text-success align-middle me-1"></i> 23 Nov, 2021
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                          <a href="javascript:void(0);" class="btn btn-primary me-md-2" role="button">Tayang</a>
-                          <a href="javascript:void(0);" class="btn btn-warning me-md-2" role="button">Draf</a>
-                        </div>
-                    </div>
-                  </div>
-                  <!--end card-->
-                </div>
-                <!--end col-->
+                
               </div>
               <!--end row-->
               <!-- <div class="mt-4">

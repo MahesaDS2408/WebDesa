@@ -13,7 +13,7 @@
         <link rel="shortcut icon" type="image/x-icon" href="<?php base_url() ?>/assets/imgs/template/<?= $wo['value_web_option'] ?>">
       <?php } ?>
       <?php if($wo['name_web_option'] == "nama_web_desa"){ ?>
-        <title>Login Admin | Web  <?= ucwords($wo['value_web_option']) ?></title>
+        <title>Dashboard Admin | Web  <?= ucwords($wo['value_web_option']) ?></title>
       <?php } ?>
     <?php endforeach; ?>
 
@@ -194,6 +194,21 @@
                                     </li>
                                     <li class="nav-item">
                                         <a href="#!" class="nav-link"> Galeri </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- Profile Desa -->
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarDesa" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLanding">
+                                <i class="bx bx-arch"></i> <span data-key="t-landing">Profile Desa</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarDesa">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link" >Potensi Desa</a>
+                                        <a href="#" class="nav-link" >Peta Desa</a>
+                                        <a href="#" class="nav-link" >Visi dan Misi</a>
                                     </li>
                                 </ul>
                             </div>

@@ -11,5 +11,13 @@ class UserDetailModel extends Model
     protected $allowedFields = ["email", "nama_user", "foto_user"];
     protected $useTimestamps = false;
 
+    public function id_user_detail()
+    {
+        $session = session();
+        $email = $session->get('email');
+        return $this->db->table('user_detail')
+        ->where('email',['email'=>$email])
+        ->get()->getRow('id_user_detail');
+    }
     
 }
