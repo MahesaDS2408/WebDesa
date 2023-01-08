@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\ArtikelModel;
 use App\Models\WebOptionModel;
 
 class Halaman extends BaseController
@@ -10,6 +11,8 @@ class Halaman extends BaseController
 	{
 		$model = new WebOptionModel();
 		$data['web_option'] = $model->get_option_web();//wajib ada di setiap frame
+		$model = new ArtikelModel();
+		$data['artikel'] = $model->get_3_artikel();
 		return view('home', $data);
 	}
 

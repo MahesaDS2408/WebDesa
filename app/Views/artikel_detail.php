@@ -11,8 +11,8 @@
     <div class="container">
       <div class="box-white">
         <div class="max-width-single">
-          <a class="btn btn-tag" href="#">Kategori</a>
-          <h2 class="mb-30 mt-20 text-center">11 Tips to Help You Get New Clients Through Cold Calling</h2>
+          <a class="btn btn-tag" href="#">Berita</a>
+          <h2 class="mb-30 mt-20 text-center">Pembagian Sembako Oleh Kepala Desa</h2>
           <div class="post-meta text-muted d-flex align-items-center mx-auto justify-content-center">
             <div class="author d-flex align-items-center mr-30">
               <img alt="Webdesa" src="<?php base_url() ?>/assets/imgs/page/homepage1/user3.png">

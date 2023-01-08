@@ -82,10 +82,10 @@
                             </h5>
                             <ul class="list-inline mb-0">
                               <li class="list-inline-item">
-                                <i class="ri-user-3-fill text-success align-middle me-1"></i> <?= ucwords($art['nama_user']) ?>
+                                <i class="ri-user-3-fill text-success align-middle me-1"></i><?= ucwords($art['nama_user']) ?>
                               </li>
                               <li class="list-inline-item">
-                                <i class="ri-calendar-2-fill text-success align-middle me-1"></i> <?= strftime('%A, %d %B %Y', strtotime($art['tgl_artikel'])); ?>
+                                <i class="ri-calendar-2-fill text-success align-middle me-1"></i><?= strftime('%A, %d %B %Y', strtotime($art['tgl_artikel'])); ?>
                               </li>
                             </ul>
                           </div>
