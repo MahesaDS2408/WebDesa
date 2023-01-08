@@ -89,6 +89,10 @@
                           </ul>
                         </div>
                       </div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                          <a href="javascript:void(0);" class="btn btn-primary me-md-2" role="button">Tayang</a>
+                          <a href="javascript:void(0);" class="btn btn-warning me-md-2" role="button">Draf</a>
+                        </div>
                     </div>
                   </div>
                   <!--end card-->
@@ -120,6 +124,10 @@
                           </ul>
                         </div>
                       </div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                          <a href="javascript:void(0);" class="btn btn-primary me-md-2" role="button">Tayang</a>
+                          <a href="javascript:void(0);" class="btn btn-warning me-md-2" role="button">Draf</a>
+                        </div>
                     </div>
                   </div>
                   <!--end card-->
@@ -151,6 +159,10 @@
                           </ul>
                         </div>
                       </div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                          <a href="javascript:void(0);" class="btn btn-primary me-md-2" role="button">Tayang</a>
+                          <a href="javascript:void(0);" class="btn btn-warning me-md-2" role="button">Draf</a>
+                        </div>
                     </div>
                   </div>
                   <!--end card-->
@@ -182,6 +194,10 @@
                           </ul>
                         </div>
                       </div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                          <a href="javascript:void(0);" class="btn btn-primary me-md-2" role="button">Tayang</a>
+                          <a href="javascript:void(0);" class="btn btn-warning me-md-2" role="button">Draf</a>
+                        </div>
                     </div>
                   </div>
                   <!--end card-->

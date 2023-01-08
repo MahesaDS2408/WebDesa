@@ -19,6 +19,8 @@
 
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
 
+    <script src="https://cdn.ckeditor.com/4.10.0/full-all/ckeditor.js"></script>
+
 
     <!-- Layout config Js -->
     <script src="<?php base_url() ?>/assets_admin/js/layout.js"></script>

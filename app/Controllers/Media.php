@@ -40,5 +40,24 @@ class Media extends BaseController
         return redirect()->to('/user');
 		
 	}
+    public function new_post()
+	{
+		//cek apakah ada session yang sudah masuk
+        if (!$this->session->has('isLogin')) {
+            return redirect()->to('login_admin');
+        }
+		//cek role dari session yang masuk
+        if ($this->session->get('level') == 'admin' || $this->session->get('level') == 'operator') {
+			$model = new UserModel();
+			$data['user'] = $model->get_detail_akun();
+		    return view('Admin/post_new', $data);
+        }
+        return redirect()->to('/user');
+		
+	}
+    public function input_new_post()
+    {
+        
+    }
 
 }
