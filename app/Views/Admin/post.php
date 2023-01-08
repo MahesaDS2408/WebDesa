@@ -234,15 +234,15 @@
 <!-- script search box berita -->
 <script type="text/javascript">
   function filter() {
-    var value,judul,rapat,i;
+    var value,judul,berita,i;
     value = document.getElementById("value").value.toUpperCase();
-    rapat = document.getElementsByClassName("berita");
-    for(i=0;i<rapat.length;i++){
-      judul = rapat[i].getElementsByClassName("judul");
+    berita = document.getElementsByClassName("berita");
+    for(i=0;i<berita.length;i++){
+      judul = berita[i].getElementsByClassName("judul");
       if (judul[0].innerHTML.toUpperCase().indexOf(value) > -1) {
-        rapat[i].style.display = "";
+        berita[i].style.display = "";
       }else{
-        rapat[i].style.display = "none";
+        berita[i].style.display = "none";
       }
     }
   }
