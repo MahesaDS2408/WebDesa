@@ -38,7 +38,7 @@ $routes->setAutoRoute(true);
 /* =================================== User ============================== */
 $routes->get('/', 'Halaman::beranda');
 $routes->get('berita', 'Halaman::artikel');
-$routes->get('berita/(:num)/(:any)', 'Halaman::artikel_detail');
+$routes->get('berita/(:num)/(:any)', 'Halaman::artikel_detail/$1/$2');
 
 /* =================================== End User ============================== */
 

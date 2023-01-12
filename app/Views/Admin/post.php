@@ -102,41 +102,7 @@
                 <?php } ?>
 
 
-                <div class="col-lg-6 berita">
-                  <div class="card border">
-                    <div class="card-body">
-                      <div class="d-sm-flex">
-                        <div class="flex-shrink-0">
-                          <img src="assets_admin/images/small/img-2.jpg" alt="" width="115" class="rounded-1" />
-                        </div>
-                        <div class="flex-grow-1 ms-sm-4 mt-3 mt-sm-0">
-                          <ul class="list-inline mb-2">
-                            <li class="list-inline-item">
-                              <span class="badge badge-soft-warning fs-11">Development</span>
-                            </li>
-                          </ul>
-                          <h5 class="fs-15">
-                            <a href="javascript:void(0);" class="judul">How to get creative in your work ?</a>
-                          </h5>
-                          <ul class="list-inline mb-0">
-                            <li class="list-inline-item">
-                              <i class="ri-user-3-fill text-success align-middle me-1"></i> Ruby Griffin
-                            </li>
-                            <li class="list-inline-item">
-                              <i class="ri-calendar-2-fill text-success align-middle me-1"></i> 23 Nov, 2021
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                          <a href="javascript:void(0);" class="btn btn-primary me-md-2" role="button">Tayang</a>
-                          <a href="javascript:void(0);" class="btn btn-warning me-md-2" role="button">Draf</a>
-                        </div>
-                    </div>
-                  </div>
-                  <!--end card-->
-                </div>
-                <!--end col-->
+                
                 
               </div>
               <!--end row-->

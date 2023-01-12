@@ -22,10 +22,12 @@ class Halaman extends BaseController
 		$data['web_option'] = $model->get_option_web();//wajib ada di setiap frame
 		return view('artikel', $data);
 	}
-	public function artikel_detail()
+	public function artikel_detail($tahun, $judul)
 	{
 		$model = new WebOptionModel();
 		$data['web_option'] = $model->get_option_web();//wajib ada di setiap frame
+		$model = new ArtikelModel();
+		$data['one_artikel'] = $model->get_1_artikel($judul);
 		return view('artikel_detail', $data);
 	}
 }

@@ -30,6 +30,15 @@ class ArtikelModel extends Model
         ->limit(3)
         ->get()->getResultArray();
     }
+    public function get_1_artikel($judul)
+    {
+        return $this->db->table('artikel')
+        ->join('artikel_kategori','artikel_kategori.id_artikel_kategori=artikel.id_kategori')
+        ->join('user_detail','user_detail.id_user_detail=artikel.id_pembuat_artikel')
+        ->where('artikel.tayang_artikel',['tayang_artikel' => 'tayang'])
+        ->where('artikel.judul_artikel',['judul_artikel' => $judul])
+        ->get()->getResultArray();
+    }
 
     
 }

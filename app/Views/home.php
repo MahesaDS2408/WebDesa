@@ -76,7 +76,7 @@
                     </div>
                   <?php } ?>
 
-                  <div class="swiper-slide">
+                  <!-- <div class="swiper-slide">
                     <div class="card-grid-3 hover-up wow animate__animated animate__fadeIn">
                       <div class="text-center card-grid-3-image"><a href="<?php base_url() ?>/berita/<?= date('Y') ?>/judull">
                           <figure><img alt="Webdesa" src="assets/imgs/page/homepage1/img-news2.png"></figure></a></div>
@@ -118,7 +118,7 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
 
                 </div>
               </div>
