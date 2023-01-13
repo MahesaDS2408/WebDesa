@@ -141,7 +141,7 @@
         <div class="col-xl-3 col-lg-3 col-md-5 col-sm-12 col-12">
           <div class="card-image-top hover-up">
             <a href="#">
-              <div class="image" style="background-image: url(assets/imgs/page/homepage1/location1.png);">
+              <div class="image" style="background-image: url(assets/imgs/page/homepage1/location3.png);">
                 <span class="lbl-hot">Foto</span>
               </div>
             </a>

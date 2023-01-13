@@ -37,6 +37,11 @@
                 <li class="list-inline-item">
                   <a class="categories" data-filter=".video">Video</a>
                 </li>
+                <li>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a class="btn btn-primary me-md-2" role="button"  href="<?php base_url() ?>/dashboard/galeri/new_galeri"  aria-selected="false">Tambah Galeri </a>
+                    </div>
+                </li>
                 <!-- <li class="list-inline-item">
                   <a class="categories" data-filter=".photography">Photography</a>
                 </li>
