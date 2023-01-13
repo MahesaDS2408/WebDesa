@@ -12,7 +12,7 @@
         <div class="col-lg-6 text-end">
           <ul class="breadcrumbs mt-40">
             <li>
-              <a class="home-icon" href="<?php base_url() ?>">Home</a>
+              <a class="home-icon" href="<?php base_url() ?>">Beranda</a>
             </li>
             <li>Berita</li>
           </ul>
@@ -21,7 +21,7 @@
     </div>
   </div>
 </section>
-<section class="section-box mt-50">
+<!-- <section class="section-box mt-50">
   <div class="container">
     <div class="box-improve">
       <div class="row">
@@ -45,7 +45,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <section class="section-box mt-50">
   <div class="post-loop-grid">
     <div class="container">

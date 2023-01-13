@@ -15,6 +15,36 @@ class Halaman extends BaseController
 		$data['artikel'] = $model->get_3_artikel();
 		return view('home', $data);
 	}
+	public function peta_desa()
+	{
+		$model = new WebOptionModel();
+		$data['web_option'] = $model->get_option_web();//wajib ada di setiap frame
+		return view('peta_desa', $data);
+	}
+	public function pemerintah_desa()
+	{
+		$model = new WebOptionModel();
+		$data['web_option'] = $model->get_option_web();//wajib ada di setiap frame
+		return view('pemerintah_desa', $data);
+	}
+	public function visi_misi()
+	{
+		$model = new WebOptionModel();
+		$data['web_option'] = $model->get_option_web();//wajib ada di setiap frame
+		return view('visi_misi', $data);
+	}
+	public function galeri()
+	{
+		$model = new WebOptionModel();
+		$data['web_option'] = $model->get_option_web();//wajib ada di setiap frame
+		return view('galeri', $data);
+	}
+	public function kontak()
+	{
+		$model = new WebOptionModel();
+		$data['web_option'] = $model->get_option_web();//wajib ada di setiap frame
+		return view('kontak', $data);
+	}
 
 	public function artikel()
 	{

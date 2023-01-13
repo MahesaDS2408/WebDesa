@@ -44,17 +44,17 @@
             <nav class="nav-main-menu">
               <ul class="main-menu">
                 <li><a class="active" href="<?php base_url() ?>/">Beranda</a></li>
-                <li class="has-children"><a href="#">Profile Desa</a>
+                <li class="has-children"><a href="#">Profil Desa</a>
                   <ul class="sub-menu">
                     <li><a href="#">Potensi Desa</a></li>
-                    <li><a href="#">Peta Desa</a></li>
-                    <li><a href="#">Profile Aparatur</a>
+                    <li><a href="<?php base_url() ?>/peta_desa">Peta Desa</a></li>
+                    <li><a href="#">Profil Aparatur</a>
                       <ul class="sub-menu">
                         <li><a href="#">BPD</a></li>
-                        <li><a href="#">Pemerintah Desa</a></li>
+                        <li><a href="<?php base_url() ?>/pemerintah_desa">Pemerintah Desa</a></li>
                       </ul>
                     </li>
-                    <li><a href="#">Visi dan Misi</a></li>
+                    <li><a href="<?php base_url() ?>/visi_dan_misi">Visi dan Misi</a></li>
                   </ul>
                 </li>
                 <!-- <li class="has-children"><a href="#">Berita</a>
@@ -69,8 +69,8 @@
                   </ul>
                 </li> -->
                 <li><a href="#">Informasi Publik</a></li>
-                <li><a href="#">Galeri</a></li>
-                <li><a href="#">Kontak</a></li>
+                <li><a href="<?php base_url() ?>/galeri">Galeri</a></li>
+                <li><a href="<?php base_url() ?>/kontak">Kontak</a></li>
               </ul>
             </nav>
             <div class="burger-icon burger-icon-white"><span class="burger-icon-top"></span><span class="burger-icon-mid"></span><span class="burger-icon-bottom"></span></div>
@@ -98,22 +98,22 @@
               <nav>
                 <ul class="mobile-menu font-heading">
                   <li><a class="active" href="<?php base_url() ?>/">Beranda</a></li>
-                  <li class="has-children"><a href="#">Profile Desa</a>
+                  <li class="has-children"><a href="#">Profil Desa</a>
                     <ul class="sub-menu">
                       <li><a href="#">Potensi Desa</a></li>
-                      <li><a href="#">Peta Desa</a></li>
-                      <li><a href="#">Profile Aparatur</a>
+                      <li><a href="<?php base_url() ?>/peta_desa">Peta Desa</a></li>
+                      <li><a href="#">Profil Aparatur</a>
                         <ul class="sub-menu-child">
                           <li><a href="#">BPD</a></li>
-                          <li><a href="#">Pemerintah Desa</a></li>
+                          <li><a href="<?php base_url() ?>/pemerintah_desa">Pemerintah Desa</a></li>
                         </ul>
                       </li>
-                      <li><a href="#">Visi dan Misi</a></li>
+                      <li><a href="<?php base_url() ?>/visi_dan_misi">Visi dan Misi</a></li>
                     </ul>
                   </li>
                   <li><a href="#">Informasi Publik</a></li>
-                  <li><a href="#">Galeri</a></li>
-                  <li><a href="#">Kontak</a></li>
+                  <li><a href="<?php base_url() ?>/galeri">Galeri</a></li>
+                  <li><a href="<?php base_url() ?>/kontak">Kontak</a></li>
                 </ul>
               </nav>
             </div>
@@ -135,22 +135,22 @@
               <nav>
                 <ul class="mobile-menu font-heading">
                   <li><a class="active" href="<?php base_url() ?>/">Beranda</a></li>
-                  <li class="has-children"><a href="#">Profile Desa</a>
+                  <li class="has-children"><a href="#">Profil Desa</a>
                     <ul class="sub-menu">
                       <li><a href="#">Potensi Desa</a></li>
-                      <li><a href="#">Peta Desa</a></li>
-                      <li><a href="#">Profile Aparatur</a>
+                      <li><a href="<?php base_url() ?>/peta_desa">Peta Desa</a></li>
+                      <li><a href="#">Profil Aparatur</a>
                         <ul class="sub-menu-child">
                           <li><a href="#">BPD</a></li>
-                          <li><a href="#">Pemerintah Desa</a></li>
+                          <li><a href="<?php base_url() ?>/pemerintah_desa">Pemerintah Desa</a></li>
                         </ul>
                       </li>
-                      <li><a href="#">Visi dan Misi</a></li>
+                      <li><a href="<?php base_url() ?>/visi_dan_misi">Visi dan Misi</a></li>
                     </ul>
                   </li>
                   <li><a href="#">Informasi Publik</a></li>
-                  <li><a href="#">Galeri</a></li>
-                  <li><a href="#">Kontak</a></li>
+                  <li><a href="<?php base_url() ?>/galeri">Galeri</a></li>
+                  <li><a href="<?php base_url() ?>/kontak">Kontak</a></li>
                 </ul>
               </nav>
             </div>

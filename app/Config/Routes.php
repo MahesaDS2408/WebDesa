@@ -37,6 +37,11 @@ $routes->setAutoRoute(true);
 
 /* =================================== User ============================== */
 $routes->get('/', 'Halaman::beranda');
+$routes->get('peta_desa', 'Halaman::peta_desa');
+$routes->get('pemerintah_desa', 'Halaman::pemerintah_desa');
+$routes->get('visi_dan_misi', 'Halaman::visi_misi');
+$routes->get('galeri', 'Halaman::galeri');
+$routes->get('kontak', 'Halaman::kontak');
 $routes->get('berita', 'Halaman::artikel');
 $routes->get('berita/(:num)/(:any)', 'Halaman::artikel_detail/$1/$2');
 
