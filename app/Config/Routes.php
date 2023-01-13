@@ -61,9 +61,10 @@ $routes->get('logout', 'Auth::slogout');
 /* =================================== Admin ============================== */
 
 $routes->get('dashboard', 'Admin::dashboard');
-$routes->get('post', 'Media::post');
-$routes->get('new_post', 'Media::new_post');
-$routes->post('new_post', 'Media::input_new_post');
+$routes->get('dashboard/post', 'Media::post');
+$routes->get('dashboard/post/new_post', 'Media::new_post');
+$routes->post('dashboard/post/new_post', 'Media::input_new_post');
+$routes->get('dashboard/galeri', 'Media::galeri');
 
 /* =================================== End Admin ============================== */
 

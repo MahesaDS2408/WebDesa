@@ -94,5 +94,23 @@ class Media extends BaseController
         }
         return redirect()->to('post');
     }
+    public function galeri()
+    {
+        //cek apakah ada session yang sudah masuk
+        if (!$this->session->has('isLogin')) {
+            return redirect()->to('login_admin');
+        }
+		//cek role dari session yang masuk
+        if ($this->session->get('level') == 'admin' || $this->session->get('level') == 'operator') {
+			$model = new UserModel();
+			$data['user'] = $model->get_detail_akun();
+            $model = new WebOptionModel();
+		    $data['web_option'] = $model->get_option_web();//wajib
+            $model = new ArtikelModel();
+            $data['artikel'] = $model->get_artikel();
+		    return view('Admin/galeri', $data);
+        }
+        return redirect()->to('/user');
+    }
 
 }

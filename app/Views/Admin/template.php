@@ -26,6 +26,7 @@
 
     <script src="https://cdn.ckeditor.com/4.10.0/full-all/ckeditor.js"></script>
 
+    <link rel="stylesheet" href="<?php base_url() ?>/assets_admin/libs/glightbox/css/glightbox.min.css">
 
     <!-- Layout config Js -->
     <script src="<?php base_url() ?>/assets_admin/js/layout.js"></script>
@@ -36,7 +37,7 @@
     <!-- App Css-->
     <link href="<?php base_url() ?>/assets_admin/css/app.min.css" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
-    <!-- <link href="<?php base_url() ?>/assets_admin/css/custom.min.css" rel="stylesheet" type="text/css" /> -->
+    <link href="<?php base_url() ?>/assets_admin/css/custom.min.css" rel="stylesheet" type="text/css" />
     <!-- Boostrap tambahan -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css" integrity="sha512-mR/b5Y7FRsKqrYZou7uysnOdCIJib/7r5QeJMFvLNHNhtye3xJp1TdJVPLtetkukFn227nKpXD9OjUc09lx97Q==" crossorigin="anonymous"
         referrerpolicy="no-referrer" />
@@ -190,10 +191,10 @@
                                         <a href="#!" class="nav-link"> Penyimpanan </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="<?php base_url() ?>/post" class="nav-link"> Post </a>
+                                        <a href="<?php base_url() ?>/dashboard/post" class="nav-link"> Post </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#!" class="nav-link"> Galeri </a>
+                                        <a href="<?php base_url() ?>/dashboard/galeri" class="nav-link"> Galeri </a>
                                     </li>
                                 </ul>
                             </div>
@@ -296,11 +297,12 @@
 
     <!-- JAVASCRIPT -->
     <script src="<?php base_url() ?>/assets_admin/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="<?php base_url() ?>/assets_admin/libs/simplebar/simplebar.min.js"></script> -->
+    <script src="<?php base_url() ?>/assets_admin/libs/simplebar/simplebar.min.js"></script>
     <script src="<?php base_url() ?>/assets_admin/libs/node-waves/waves.min.js"></script>
     <script src="<?php base_url() ?>/assets_admin/libs/feather-icons/feather.min.js"></script>
     <script src="<?php base_url() ?>/assets_admin/js/pages/plugins/lord-icon-2.1.0.js"></script>
-    <!-- <script src="<?php base_url() ?>/assets_admin/js/plugins.js"></script> -->
+    <script src="<?php base_url() ?>/assets_admin/js/plugins.js"></script>
+    <script src="<?php base_url() ?>/assets_admin//libs/glightbox/js/glightbox.min.js"></script>
 
     <!-- apexcharts -->
     <!-- <script src="<?php base_url() ?>/assets_admin/libs/apexcharts/apexcharts.min.js"></script> -->
@@ -328,6 +330,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
 
     <script src="<?php base_url() ?>/assets_admin/js/pages/datatables.init.js"></script>
+    <script src="<?php base_url() ?>/assets_admin/js/pages/gallery.init.js"></script>
+    <script src="<?php base_url() ?>/assets_admin/libs/glightbox/js/glightbox.min.js"></script>
+    <script src="<?php base_url() ?>/assets_admin/libs/isotope-layout/isotope.pkgd.min.js"></script>
+
+
+
     <!-- App js -->
     <script src="<?php base_url() ?>/assets_admin/js/app.js"></script>
 

@@ -29,7 +29,7 @@
         <!-- end card header -->
         <div class="card-body">
           <div class="live-preview">
-            <form action="<?= htmlentities( base_url('/new_post') , ENT_QUOTES) ?>" method="POST" enctype="multipart/form-data">
+            <form action="<?= htmlentities( base_url('/dashboard/post/new_post') , ENT_QUOTES) ?>" method="POST" enctype="multipart/form-data">
                 <div class="row gy-4">
                     
                     <div class="col-xxl-12 col-md-6">

@@ -53,7 +53,7 @@
             </li>
             <li>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-              <a class="btn btn-primary me-md-2" role="button"  href="<?php base_url() ?>/new_post"  aria-selected="false">Tambah Berita </a>
+              <a class="btn btn-primary me-md-2" role="button"  href="<?php base_url() ?>/dashboard/post/new_post"  aria-selected="false">Tambah Berita </a>
             </div>
             </li>
           </ul>
