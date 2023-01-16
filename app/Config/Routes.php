@@ -66,7 +66,7 @@ $routes->get('dashboard/post/new_post', 'Media::new_post');
 $routes->post('dashboard/post/new_post', 'Media::input_new_post');
 $routes->get('dashboard/galeri', 'Media::galeri');
 $routes->get('dashboard/galeri/new_galeri', 'Media::new_galeri');
-$routes->post('dashboard/galeri/new_galeri', 'Media::input_new_galeri');
+$routes->post('dashboard/galeri/new_galeri', 'Media::input_galeri');
 
 /* =================================== End Admin ============================== */
 
