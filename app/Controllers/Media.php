@@ -107,10 +107,14 @@ class Media extends BaseController
         if ($this->session->get('level') == 'admin' || $this->session->get('level') == 'operator') {
 			$model = new UserModel();
 			$data['user'] = $model->get_detail_akun();
+            $data['all_user'] = $model->getalluser();
             $model = new WebOptionModel();
 		    $data['web_option'] = $model->get_option_web();//wajib
-            $model = new ArtikelModel();
-            $data['artikel'] = $model->get_artikel();
+            $model = new GaleriModel();
+            $data['galeri'] = $model->getallgaleri();
+            $model = new GalerigroupModel();
+            $data['sub_galeri'] = $model->getallsubgaleri();
+
 		    return view('Admin/galeri', $data);
         }
         return redirect()->to('/user');

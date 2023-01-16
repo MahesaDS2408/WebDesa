@@ -51,34 +51,40 @@
               </ul>
             </div>
             <div class="row gallery-wrapper">
-              <div class="element-item col-xxl-3 col-xl-4 col-sm-6 foto " data-category="foto">
-                <div class="gallery-box card">
-                  <div class="gallery-container">
-                    <a class="image-popup" href="<?php base_url() ?>/assets_admin/images/small/img-1.jpg" title="">
-                      <img class="gallery-img img-fluid mx-auto" src="<?php base_url() ?>/assets_admin/images/small/img-1.jpg" alt="" />
-                      <div class="gallery-overlay">
-                        <h5 class="overlay-caption">Glasses and laptop from above</h5>
+              <?php foreach($galeri as $gal){ ?>
+                <?php if($gal['kategori_galeri'] == "foto"){ ?>
+                  <div class="element-item col-xxl-3 col-xl-4 col-sm-6 foto " data-category="foto">
+                    <div class="gallery-box card">
+                      <div class="gallery-container">
+                        <a class="image-popup" href="<?php base_url() ?>/assets/images_galeri/<?= $gal['file_galeri'] ?>" title="">
+                          <img class="gallery-img img-fluid mx-auto" src="<?php base_url() ?>/assets/images_galeri/<?= $gal['file_galeri'] ?>" alt="" />
+                          <div class="gallery-overlay">
+                            <h5 class="overlay-caption"><?= ucwords($gal['judul_galeri']) ?></h5>
+                          </div>
+                        </a>
                       </div>
-                    </a>
-                  </div>
-                  <div class="box-content">
-                    <div class="d-flex align-items-center mt-1">
-                      <div class="flex-grow-1 text-muted">by <a href="" class="text-body text-truncate">Ron Mackie</a>
-                      </div>
-                      <div class="flex-shrink-0">
-                        <div class="d-flex gap-3">
-                          <button type="button" class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0">
-                            <i class="ri-thumb-up-fill text-muted align-bottom me-1"></i> 2.2K </button>
-                          <button type="button" class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0">
-                            <i class="ri-question-answer-fill text-muted align-bottom me-1"></i> 1.3K </button>
+                      <div class="box-content">
+                        <div class="d-flex align-items-center mt-1">
+                          <div class="flex-grow-1 text-muted">by 
+                            <?php foreach($all_user as $allus){ ?>
+                              <?php if($allus['id_user_detail'] == $gal['id_pembuat_galeri']){ ?>
+                                <a href="" class="text-body text-truncate"><?= ucwords($allus['nama_user']) ?></a>
+                              <?php } ?>
+                            <?php } ?>
+                          </div>
+                          <div class="flex-shrink-0">
+                            <div class="d-flex gap-3">
+                              <button type="button" class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0">
+                                <i class="ri-question-answer-fill text-muted align-bottom me-1"></i> 4 Foto</button>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <!-- end col -->
-              <div class="element-item col-xxl-3 col-xl-4 col-sm-6 video" data-category="video">
+                  <!-- end col -->
+                <?php } ?>
+              <!-- <div class="element-item col-xxl-3 col-xl-4 col-sm-6 video" data-category="video">
                 <div class="gallery-box card">
                   <div class="gallery-container">
                     <a class="image-popup" href="<?php base_url() ?>/assets_admin/images/small/img-2.jpg" title="">
@@ -94,98 +100,15 @@
                       </div>
                       <div class="flex-shrink-0">
                         <div class="d-flex gap-3">
-                          <button type="button" class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0">
-                            <i class="ri-thumb-up-fill text-muted align-bottom me-1"></i> 3.2K </button>
-                          <button type="button" class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0">
-                            <i class="ri-question-answer-fill text-muted align-bottom me-1"></i> 1.1K </button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
               <!-- end col -->
-              <div class="element-item col-xxl-3 col-xl-4 col-sm-6 foto" data-category="foto">
-                <div class="gallery-box card">
-                  <div class="gallery-container">
-                    <a class="image-popup" href="<?php base_url() ?>/assets_admin/images/small/img-3.jpg" title="">
-                      <img class="gallery-img img-fluid mx-auto" src="<?php base_url() ?>/assets_admin/images/small/img-3.jpg" alt="" />
-                      <div class="gallery-overlay">
-                        <h5 class="overlay-caption">Photo was taken in Beach</h5>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="box-content">
-                    <div class="d-flex align-items-center mt-1">
-                      <div class="flex-grow-1 text-muted">by <a href="" class="text-body text-truncate">Elwood Arter</a>
-                      </div>
-                      <div class="flex-shrink-0">
-                        <div class="d-flex gap-3">
-                          <button type="button" class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0">
-                            <i class="ri-thumb-up-fill text-muted align-bottom me-1"></i> 2.1K </button>
-                          <button type="button" class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0">
-                            <i class="ri-question-answer-fill text-muted align-bottom me-1"></i> 1K </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- end col -->
-              <div class="element-item col-xxl-3 col-xl-4 col-sm-6 video" data-category="video">
-                <div class="gallery-box card">
-                  <div class="gallery-container">
-                    <a class="image-popup" href="<?php base_url() ?>/assets_admin/images/small/img-4.jpg" title="">
-                      <img class="gallery-img img-fluid mx-auto" src="<?php base_url() ?>/assets_admin/images/small/img-4.jpg" alt="" />
-                      <div class="gallery-overlay">
-                        <h5 class="overlay-caption">Drawing a sketch</h5>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="box-content">
-                    <div class="d-flex align-items-center mt-1">
-                      <div class="flex-grow-1 text-muted">by <a href="" class="text-body text-truncate">Jason McQuaid</a>
-                      </div>
-                      <div class="flex-shrink-0">
-                        <div class="d-flex gap-3">
-                          <button type="button" class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0">
-                            <i class="ri-thumb-up-fill text-muted align-bottom me-1"></i> 825 </button>
-                          <button type="button" class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0">
-                            <i class="ri-question-answer-fill text-muted align-bottom me-1"></i> 101 </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- end col -->
-              <div class="element-item col-xxl-3 col-xl-4 col-sm-6 foto" data-category="foto">
-                <div class="gallery-box card">
-                  <div class="gallery-container">
-                    <a class="image-popup" href="<?php base_url() ?>/assets_admin/images/small/img-5.jpg" title="">
-                      <img class="gallery-img img-fluid mx-auto" src="<?php base_url() ?>/assets_admin/images/small/img-5.jpg" alt="" />
-                      <div class="gallery-overlay">
-                        <h5 class="overlay-caption">Working from home little spot</h5>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="box-content">
-                    <div class="d-flex align-items-center mt-1">
-                      <div class="flex-grow-1 text-muted">by <a href="" class="text-body text-truncate">Henry Baird</a>
-                      </div>
-                      <div class="flex-shrink-0">
-                        <div class="d-flex gap-3">
-                          <button type="button" class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0">
-                            <i class="ri-thumb-up-fill text-muted align-bottom me-1"></i> 632 </button>
-                          <button type="button" class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0">
-                            <i class="ri-question-answer-fill text-muted align-bottom me-1"></i> 95 </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- end col -->
+              <?php } ?>
+              
               
             </div>
             <!-- end row -->

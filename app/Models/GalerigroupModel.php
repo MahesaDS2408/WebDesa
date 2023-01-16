@@ -11,7 +11,11 @@ class GalerigroupModel extends Model
     protected $allowedFields = ["id_galeri", "file_foto_galeri"];
     protected $useTimestamps = false;
 
-
+    public function getallsubgaleri()
+    {
+        return $this->db->table('group_galeri')
+        ->get()->getResultArray();
+    }
 
     
 }

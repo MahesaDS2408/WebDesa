@@ -21,6 +21,12 @@ class UserModel extends Model
         ->get()->getResultArray();
 
     }
+    public function getalluser()
+    {
+        return $this->db->table('user')
+        ->join('user_detail','user_detail.email=user.email')
+        ->get()->getResultArray();
+    }
 
     
 }
