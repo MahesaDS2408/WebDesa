@@ -68,7 +68,7 @@
                                   <div class="info-right-img"><span class="font-sm font-bold color-brand-1 op-70"><?= ucwords($nama_panggilan[0]) ?></span><br><span class="font-xs color-text-paragraph-2"><?= strftime('%A, %d %B %Y', strtotime($art['tgl_artikel'])); ?></span></div>
                                 </div>
                               </div>
-                              <div class="col-lg-6 text-end col-6 pt-15"><span class="color-text-paragraph-2 font-xs">8 mins to read</span></div>
+                              <!-- <div class="col-lg-6 text-end col-6 pt-15"><span class="color-text-paragraph-2 font-xs">8 mins to read</span></div> -->
                             </div>
                           </div>
                         </div>

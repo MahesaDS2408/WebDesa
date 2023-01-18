@@ -18,6 +18,18 @@ class ArtikelModel extends Model
         ->join('user_detail','user_detail.id_user_detail=artikel.id_pembuat_artikel')
         ->get()->getResultArray();
     }
+
+
+
+// USER
+    public function get_all_artikel()
+    {
+        return $this->db->table('artikel')
+        ->join('artikel_kategori','artikel_kategori.id_artikel_kategori=artikel.id_kategori')
+        ->join('user_detail','user_detail.id_user_detail=artikel.id_pembuat_artikel')
+        ->where('artikel.tayang_artikel',['tayang_artikel' => 'tayang'])
+        ->get()->getResultArray();
+    }
     public function get_3_artikel()
     {
         $session = session();

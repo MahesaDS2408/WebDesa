@@ -50,6 +50,8 @@ class Halaman extends BaseController
 	{
 		$model = new WebOptionModel();
 		$data['web_option'] = $model->get_option_web();//wajib ada di setiap frame
+		$model = new ArtikelModel();
+		$data['artikel'] = $model->get_all_artikel();
 		return view('artikel', $data);
 	}
 	public function artikel_detail($tahun, $judul)
