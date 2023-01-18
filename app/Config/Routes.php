@@ -74,6 +74,12 @@ $routes->get('dashboard/galeri', 'Media::galeri');
 $routes->get('dashboard/galeri/new_galeri', 'Media::new_galeri');
 $routes->post('dashboard/galeri/new_galeri', 'Media::input_galeri');
 
+
+
+// Profile
+$routes->get('dashboard/visi_misi', 'Profile_Desa::visi_misi');
+$routes->post('dashboard/visi_misi', 'Profile_Desa::update_visi_misi');
+
 /* =================================== End Admin ============================== */
 
 

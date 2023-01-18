@@ -181,7 +181,7 @@
                     <ul class="navbar-nav" id="navbar-nav">
                         <li class="menu-title"><span data-key="t-menu">Menu</span></li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="#"  role="button" aria-expanded="false" aria-controls="sidebarDashboards">
+                            <a class="nav-link menu-link" href="<?php base_url() ?>/dashboard"  role="button" aria-expanded="false" aria-controls="sidebarDashboards">
                                 <i class="bx bxs-dashboard"></i> <span data-key="t-dashboards">Dashboards</span>
                             </a>
                         </li> 
@@ -215,7 +215,7 @@
                                     <li class="nav-item">
                                         <a href="#" class="nav-link" >Potensi Desa</a>
                                         <a href="#" class="nav-link" >Peta Desa</a>
-                                        <a href="#" class="nav-link" >Visi dan Misi</a>
+                                        <a href="<?php base_url() ?>/dashboard/visi_misi" class="nav-link" >Visi dan Misi</a>
                                     </li>
                                 </ul>
                             </div>

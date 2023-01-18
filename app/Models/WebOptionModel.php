@@ -16,6 +16,23 @@ class WebOptionModel extends Model
         return $this->db->table('web_option')
         ->get()->getResultArray();
     }
+    public function get_visi()
+    {
+        return $this->db->table('web_option')
+        ->where('name_web_option',['name_web_option'=>"visi_desa"])
+        ->get()->getResultArray();
+    }
+    public function get_misi()
+    {
+        return $this->db->table('web_option')
+        ->where('name_web_option',['name_web_option'=>"misi_desa"])
+        ->get()->getResultArray();
+    }
+    public function updateoption($data, $name)
+    {
+        return $this->db->table('web_option')
+        ->update($data, ['name_web_option' => $name]);
+    }
 
     
 }
