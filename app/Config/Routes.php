@@ -64,6 +64,12 @@ $routes->get('dashboard', 'Admin::dashboard');
 $routes->get('dashboard/post', 'Media::post');
 $routes->get('dashboard/post/new_post', 'Media::new_post');
 $routes->post('dashboard/post/new_post', 'Media::input_new_post');
+$routes->get('dashboard/post/edit_post/(:num)', 'Media::edit_post/$1');
+$routes->post('dashboard/post/edit_post/(:num)', 'Media::update_post/$1');
+$routes->get('dashboard/post/hapus_post/(:num)', 'Media::delete_post/$1');
+$routes->get('dashboard/post/status_post/(:num)/(:any)', 'Media::status_post/$1/$2');
+
+
 $routes->get('dashboard/galeri', 'Media::galeri');
 $routes->get('dashboard/galeri/new_galeri', 'Media::new_galeri');
 $routes->post('dashboard/galeri/new_galeri', 'Media::input_galeri');

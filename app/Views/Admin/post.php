@@ -78,7 +78,7 @@
                               </li>
                             </ul>
                             <h5 class="fs-15">
-                              <a href="javascript:void(0);" class="judul"><?= ucwords($art['judul_artikel']) ?></a>
+                              <a href="<?php base_url() ?>/berita/<?= strftime('%Y', strtotime($art['tgl_artikel'])); ?>/<?= $art['judul_artikel'] ?>" target="_blank" class="judul"><?= ucwords($art['judul_artikel']) ?></a>
                             </h5>
                             <ul class="list-inline mb-0">
                               <li class="list-inline-item">
@@ -91,8 +91,13 @@
                           </div>
                         </div>
                           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                            <a href="javascript:void(0);" class="btn btn-primary me-md-2" role="button">Tayang</a>
-                            <a href="javascript:void(0);" class="btn btn-warning me-md-2" role="button">Draf</a>
+                            <a href="<?php base_url() ?>/dashboard/post/edit_post/<?= $art['id_artikel'] ?>" class="btn btn-success me-md-2" role="button">Edit</a>
+                            <?php if($art['tayang_artikel'] == "tayang"){ ?>
+                              <a href="<?php base_url() ?>/dashboard/post/status_post/<?= $art['id_artikel'] ?>/draf" class="btn btn-warning me-md-2" role="button">Draf</a>
+                            <?php }elseif($art['tayang_artikel'] == "draf"){ ?>
+                              <a href="<?php base_url() ?>/dashboard/post/status_post/<?= $art['id_artikel'] ?>/tayang" class="btn btn-primary me-md-2" role="button">Tayang</a>
+                            <?php } ?>
+                            <a href="<?php base_url() ?>/dashboard/post/hapus_post/<?= $art['id_artikel'] ?>" class="btn btn-danger me-md-2" role="button">Hapus</a>
                           </div>
                       </div>
                     </div>

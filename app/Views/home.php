@@ -125,7 +125,11 @@
               <div class="swiper-button-next"></div>
               <div class="swiper-button-prev"></div>
             </div>
-            <div class="text-center"><a class="btn btn-brand-1 btn-icon-load mt--30 hover-up" href="<?php base_url() ?>/berita">Lihat Berita Lain</a></div>
+            <div class="text-center">
+              <?php if($artikel != NULL){ ?>
+              <a class="btn btn-brand-1 btn-icon-load mt--30 hover-up" href="<?php base_url() ?>/berita">Lihat Berita Lain</a>
+              <?php } ?>
+            </div>
           </div>
         </div>
       </section>

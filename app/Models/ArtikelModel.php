@@ -20,6 +20,29 @@ class ArtikelModel extends Model
         ->get()->getResultArray();
     }
 
+    public function get_edit_artikel($id)
+    {
+        return $this->db->table('artikel')
+        ->join('artikel_kategori','artikel_kategori.id_artikel_kategori=artikel.id_kategori')
+        ->where('artikel.id_artikel',['id_artikel' => $id])
+        ->get()->getResultArray();
+    }
+    public function updateartikel($dataupdate, $id_artikel)
+    {
+        return $this->db->table('artikel')
+        ->update($dataupdate, ['id_artikel' => $id_artikel]);
+    }
+    public function getfotoartikel($id)
+    {
+        return $this->db->table('artikel')
+        ->where('artikel.id_artikel',['id_artikel'=> $id])
+        ->get()->getRow('tumbnail_artikel');
+    }
+    public function deleteartikel($id){
+        return $this->db->table('artikel')
+            ->delete(['id_artikel' => $id]);
+    } 
+
 
 
 // USER
@@ -49,7 +72,7 @@ class ArtikelModel extends Model
         return $this->db->table('artikel')
         ->join('artikel_kategori','artikel_kategori.id_artikel_kategori=artikel.id_kategori')
         ->join('user_detail','user_detail.id_user_detail=artikel.id_pembuat_artikel')
-        ->where('artikel.tayang_artikel',['tayang_artikel' => 'tayang'])
+        // ->where('artikel.tayang_artikel',['tayang_artikel' => 'tayang'])
         ->where('artikel.judul_artikel',['judul_artikel' => $judul])
         ->get()->getResultArray();
     }
