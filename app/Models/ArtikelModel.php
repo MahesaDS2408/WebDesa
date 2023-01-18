@@ -16,6 +16,7 @@ class ArtikelModel extends Model
         return $this->db->table('artikel')
         ->join('artikel_kategori','artikel_kategori.id_artikel_kategori=artikel.id_kategori')
         ->join('user_detail','user_detail.id_user_detail=artikel.id_pembuat_artikel')
+        ->orderBy('id_artikel', 'desc')
         ->get()->getResultArray();
     }
 
@@ -28,6 +29,7 @@ class ArtikelModel extends Model
         ->join('artikel_kategori','artikel_kategori.id_artikel_kategori=artikel.id_kategori')
         ->join('user_detail','user_detail.id_user_detail=artikel.id_pembuat_artikel')
         ->where('artikel.tayang_artikel',['tayang_artikel' => 'tayang'])
+        ->orderBy('id_artikel', 'desc')
         ->get()->getResultArray();
     }
     public function get_3_artikel()

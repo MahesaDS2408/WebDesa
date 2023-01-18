@@ -8,7 +8,7 @@ class GaleriModel extends Model
 {
     protected $table = "galeri";
     // protected $primaryKey = "id_galeri";
-    protected $allowedFields = ["id_galeri", "judul_galeri", "kategori_galeri", "tgl_galeri", "file_galeri", "group_galeri", "tayang_galeri", "id_pembuat_galeri"];
+    protected $allowedFields = ["id_galeri", "judul_galeri", "kategori_galeri", "tgl_galeri", "file_galeri", "tumbnail_video", "group_galeri", "tayang_galeri", "id_pembuat_galeri"];
     protected $useTimestamps = false;
 
     public function getidgaleri($foto, $judul)
@@ -22,6 +22,7 @@ class GaleriModel extends Model
     {
         return $this->db->table('galeri')
         ->join('user_detail','user_detail.id_user_detail=galeri.id_pembuat_galeri')
+        ->orderBy('id_galeri', 'desc')
         ->get()->getResultArray();
     }
 

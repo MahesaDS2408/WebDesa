@@ -217,11 +217,28 @@ class Media extends BaseController
             }
 
             // jika semua aksi telah di lalui
-            redirect()->to('dashboard/galeri');
+            return redirect()->to('dashboard/galeri');
 
         }elseif($data['kategori'] == "video"){
             // KAtegori Galeri Video Belumm
-            echo "Belum";
+            $token_video = substr($data['link'],32);
+            $link = "https://www.youtube.com/embed/".$token_video;
+            $tumbnail = "https://img.youtube.com/vi/".$token_video."/mqdefault.jpg";
+            $this->galeriModel = new GaleriModel();
+            $simpan = $this->galeriModel->save([
+                        'judul_galeri' => $data['JGaleri'],
+                        'kategori_galeri' => $data['kategori'],
+                        'tgl_galeri' => date('Y-m-d H:i:s'),
+                        'file_galeri' => $link,
+                        'tumbnail_video' => $tumbnail,
+                        'group_galeri' => "tidak",
+                        'tayang_galeri' => "tayang",
+                        'id_pembuat_galeri' => $id_pembuat
+                    ]);
+            if($simpan){
+                return redirect()->to('dashboard/galeri');
+            }
+
         }
         
     }

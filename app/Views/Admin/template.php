@@ -340,6 +340,8 @@
     <script src="<?php base_url() ?>/assets_admin/libs/glightbox/js/glightbox.min.js"></script>
     <script src="<?php base_url() ?>/assets_admin/libs/isotope-layout/isotope.pkgd.min.js"></script>
 
+    <!-- <script src="<?php base_url(); ?>/assets_admin/js/select2.min.js" crossorigin="anonymous"></script> -->
+
 
 
     <!-- App js -->

@@ -38,19 +38,19 @@
                         <!--end col-->
                         <div class="col-xxl-3 col-md-6">
                             <label for="kategori" class="form-label">Kategori Galeri</label>
-                            <select class="form-select" name="kategori" id="kategori" aria-label="Default select example" >
-                                <option disabled selected>Pilih Kategori</option>
+                            <select class="form-select" name="kategori" id="kategori" aria-label="Default select example" required>
+                                <option disabled selected value="">Pilih Kategori</option>
                                 <option value="foto">Foto</option>
                                 <option value="video">Video</option>
                             </select>
                         </div>
                         <!--end col-->
-                        <!-- <div class="col-xxl-3 col-md-6">
-                            <label for="TglGaleri" class="form-label">Tanggal Galeri</label>
-                            <input type="datetime-local" class="form-control" id="TglGaleri" name="TglGaleri">
-                        </div> -->
+                        <div class="col-xxl-3 col-md-6" id="video">
+                            <label for="TglGaleri" class="form-label">Link Youtube</label>
+                            <input type="url" class="form-control" id="link" name="link">
+                        </div>
                         <!-- Field Loop -->
-                        <div class="form-foto col-xxl-6 col-md-6 after-add-foto">
+                        <div class="form-foto col-xxl-6 col-md-6 after-add-foto" id="foto">
                             <div class="row">
                                 <div class="col-md-8">
                                     <label for="file_upload" class="form-label">File Foto</label>
@@ -110,6 +110,8 @@
     }
 </script> -->
 <!-- JQuery Foto -->
+
+<!-- Javascript add remove -->
 <script type="text/javascript">
     $(document).ready(function() {
       $(".add-foto").click(function(){ 
@@ -121,6 +123,28 @@
       $("body").on("click",".remove_foto",function(){ 
           $(this).parents(".form-foto").remove();
       });
+    });
+</script>
+
+<!-- Select 2 Kategori -->
+<!-- <script>
+    $(".theSelect").select2();
+</script> -->
+<!-- Video-->
+<script>
+  $('#video').hide();
+  $('#foto').hide();
+    $(function() {
+        $('#kategori').change(function() {
+            if ($('#kategori').val() == 'video') {
+                $('#video').show();
+                $('#foto').hide();
+                // createByJson();
+            } else if($('#kategori').val() == 'foto'){
+                $('#foto').show();
+                $('#video').hide();
+            }
+        });
     });
 </script>
 <?= $this->endSection(); ?>
