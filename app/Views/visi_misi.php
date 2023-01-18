@@ -28,16 +28,17 @@
     <div class="row">
       <div class="col-lg-8 col-md-12 col-sm-12 col-12">
         <div class="content-single">
-          <h4>Visi</h4>
-          <p>Terbangunnya tata kelola pemerintahan desa yang baik dan bersih guna mewujudkan desa Sidodadi yang adil, makmur dan sejahtera.</p>
-          <h4>Misi</h4>
-          <ul>
-            <li>Menyelenggarakan pemerintahan desa yang bersih dan pelayanan administrasi yang mudah, murah, dan cepat</li>
-            <li>Mengembangkan perekonomian masyarakat melalui potensi desa dan pemberdayaan potensi generasi muda</li>
-            <li>Meningkatkan mutu kesejahteraan untuk mencapai taraf kehidupan yang lebih baik dan berpendidikan</li>
-            <li>Melestarikan kearifan lokal dan menguatkan lembaga spiritual keagamaan</li>
-            <li>Menciptakan keamanan dan keamanan yg persuasif serta terciptanya lingkungan desa Sidodadi yang aman, nyaman dan kondusif.</li>
-          </ul>
+          <?php foreach($web_option as $vismis){ ?>
+          
+          <?php if($vismis['name_web_option'] == "visi_desa"){ ?>
+            <h4>Visi</h4>
+            <?= $vismis['value_web_option'] ?>
+          <?php } ?>
+          <?php if($vismis['name_web_option'] == "misi_desa"){ ?>
+            <h4>Misi</h4>
+            <?= $vismis['value_web_option'] ?>
+          <?php } ?>
+          <?php } ?>
         </div>
     </div>
   </div>

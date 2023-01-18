@@ -214,9 +214,28 @@
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
                                         <a href="#" class="nav-link" >Potensi Desa</a>
-                                        <a href="#" class="nav-link" >Peta Desa</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#sidebarProfile" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProfile" data-key="t-profile"> Profil Aparatur
+                                        </a>
+                                        <div class="collapse menu-dropdown" id="sidebarProfile">
+                                            <ul class="nav nav-sm flex-column">
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link" data-key="t-simple-page"> BPD </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link" data-key="t-settings"> Pemerintah Desa </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="<?php base_url() ?>/dashboard/peta_desa" class="nav-link" >Peta Desa</a>
+                                    </li>
+                                    <li class="nav-item">
                                         <a href="<?php base_url() ?>/dashboard/visi_misi" class="nav-link" >Visi dan Misi</a>
                                     </li>
+                                    
                                 </ul>
                             </div>
                         </li>

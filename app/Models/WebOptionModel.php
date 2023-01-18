@@ -28,6 +28,12 @@ class WebOptionModel extends Model
         ->where('name_web_option',['name_web_option'=>"misi_desa"])
         ->get()->getResultArray();
     }
+    public function get_peta()
+    {
+        return $this->db->table('web_option')
+        ->where('name_web_option',['name_web_option'=>"peta_desa"])
+        ->get()->getResultArray();
+    }
     public function updateoption($data, $name)
     {
         return $this->db->table('web_option')

@@ -79,6 +79,8 @@ $routes->post('dashboard/galeri/new_galeri', 'Media::input_galeri');
 // Profile
 $routes->get('dashboard/visi_misi', 'Profile_Desa::visi_misi');
 $routes->post('dashboard/visi_misi', 'Profile_Desa::update_visi_misi');
+$routes->get('dashboard/peta_desa', 'Profile_Desa::peta_desa');
+$routes->post('dashboard/peta_desa', 'Profile_Desa::update_peta_desa');
 
 /* =================================== End Admin ============================== */
 
