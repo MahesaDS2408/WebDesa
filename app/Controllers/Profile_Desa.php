@@ -105,5 +105,20 @@ class Profile_Desa extends BaseController
         }
         return redirect()->to('/user');
     }
+    public function aparatur_desa()
+    {
+        if (!$this->session->has('isLogin')) {
+            return redirect()->to('login_admin');
+        }
+		//cek role dari session yang masuk
+        if ($this->session->get('level') == 'admin' || $this->session->get('level') == 'operator') {
+			$model = new UserModel();
+			$data['user'] = $model->get_detail_akun();
+            $model = new WebOptionModel();
+		    $data['web_option'] = $model->get_option_web();//wajib
+		    return view('Admin/aparatur_desa', $data);
+        }
+        return redirect()->to('/user');
+    }
 
 }

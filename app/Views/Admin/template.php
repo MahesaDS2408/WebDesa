@@ -208,7 +208,7 @@
                         <!-- Profile Desa -->
                         <li class="nav-item">
                             <a class="nav-link menu-link" href="#sidebarDesa" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLanding">
-                                <i class="bx bx-arch"></i> <span data-key="t-landing">Profile Desa</span>
+                                <i class="bx bx-arch"></i> <span data-key="t-landing">Profil Desa</span>
                             </a>
                             <div class="collapse menu-dropdown" id="sidebarDesa">
                                 <ul class="nav nav-sm flex-column">
@@ -224,7 +224,7 @@
                                                     <a href="#" class="nav-link" data-key="t-simple-page"> BPD </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="#" class="nav-link" data-key="t-settings"> Pemerintah Desa </a>
+                                                    <a href="<?php base_url() ?>/dashboard/aparatur_desa" class="nav-link" data-key="t-settings"> Pemerintah Desa </a>
                                                 </li>
                                             </ul>
                                         </div>

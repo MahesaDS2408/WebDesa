@@ -6,7 +6,9 @@
     <img src="<?php base_url() ?>/assets/imgs/page/blog/img-single.png">
   </div>
 </section>
-<?php foreach($one_artikel as $one_art){ ?>
+<?php foreach($one_artikel as $one_art){ 
+  $nama_panggilan = explode(' ',trim($one_art['nama_user']));
+  ?>
 <section class="section-box">
   <div class="archive-header pt-50 text-center">
     <div class="container">
@@ -17,7 +19,7 @@
           <div class="post-meta text-muted d-flex align-items-center mx-auto justify-content-center">
             <div class="author d-flex align-items-center mr-30">
               <img alt="Webdesa" src="<?php base_url() ?>/assets/imgs/page/homepage1/user3.png">
-              <span>Admin</span>
+              <span><?= ucwords($nama_panggilan[0]) ?></span>
             </div>
             <div class="date">
               <span class="font-xs color-text-paragraph-2 mr-20 d-inline-block">
@@ -39,7 +41,7 @@
         <div class="single-body">
           <div class="max-width-single"></div>
           <figure>
-            <img src="<?php base_url() ?>/assets/imgs/page/blog/img-content.png">
+            <img src="<?php base_url() ?>/assets/images_berita/<?= $one_art['tumbnail_artikel'] ?>">
           </figure>
           <div class="max-width-single">
             <div class="content-single">

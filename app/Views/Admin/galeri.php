@@ -202,7 +202,7 @@
                 </div>
                 <div class="modal-body">
                   <div class="ratio ratio-16x9">
-                      <iframe src="https://www.youtube.com/embed/-OCkKFhZppg" frameborder="0" title="YouTube video" allowfullscreen></iframe>
+                      <iframe src="<?= $galm['file_galeri'] ?>" frameborder="0" title="YouTube video" allowfullscreen></iframe>
                   </div>
                 </div>
             </div>

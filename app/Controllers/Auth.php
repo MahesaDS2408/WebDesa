@@ -17,8 +17,8 @@ class Auth extends BaseController
     }
     public function hasil_test_password()
     {
-        $hasil = "$2y$10$9/AB.j8gxS/viDBg.TJw8ONpf5X4Z6hodffJ/guhjun4eBbFYyqLK"; // password di database
-        $password = "123"; // password inputan
+        $hasil = '$2y$10$wtGhZ8zHx1nJFoc3GXUN4eKZ1/lZ8PokhfZjvQ.tpP20x/BI.CGwG'; // password di database
+        $password = 'SisDes09'; // password inputan
         if(password_verify($password,$hasil)){//dibandingkan
             echo 'Selamat , Password Valid !';
         }else{

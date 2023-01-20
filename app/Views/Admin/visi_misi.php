@@ -11,9 +11,9 @@
         <div class="page-title-right">
           <ol class="breadcrumb m-0">
             <li class="breadcrumb-item">
-              <a href="javascript: void(0);">Visi dan Misi</a>
+              <a href="javascript: void(0);">Profil Desa</a>
             </li>
-            <li class="breadcrumb-item active">Membuat Visi dan Misi</li>
+            <li class="breadcrumb-item active">Visi dan Misi</li>
           </ol>
         </div>
       </div>
